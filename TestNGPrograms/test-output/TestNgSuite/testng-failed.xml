@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNgSuite]">
+  <parameter name="input" value="madam"/>
+  <test name="PNTest">
+    <classes>
+      <class name="com.test.PrimeNumberTest"/>
+    </classes>
+  </test> <!-- PNTest -->
+  <test name="LETest">
+    <classes>
+      <class name="com.test.LargestElementTest"/>
+    </classes>
+  </test> <!-- LETest -->
+  <test name="FactTest">
+    <groups>
+      <define name="all">
+        <include name="checkTest"/>
+        <include name="funcTest"/>
+      </define> <!-- all -->
+      <run>
+        <include name="all"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.test.FactorialTest"/>
+    </classes>
+  </test> <!-- FactTest -->
+  <test name="PTest">
+    <parameter name="input" value="madam"/>
+    <classes>
+      <class name="com.test.PalindromeTest"/>
+    </classes>
+  </test> <!-- PTest -->
+  <test name="ATest">
+    <classes>
+      <class name="com.test.ArmStrongTest"/>
+    </classes>
+  </test> <!-- ATest -->
+</suite> <!-- Failed suite [TestNgSuite] -->
